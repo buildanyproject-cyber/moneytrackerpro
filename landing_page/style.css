@@ -293,17 +293,18 @@ a {
 }
 
 .btn-secondary {
-    background: rgba(255,255,255,0.1);
+    background: var(--secondary);
     color: white;
-    border: 1px solid rgba(255,255,255,0.1);
+    border: 1px solid var(--secondary);
+    box-shadow: 0 10px 20px rgba(16, 185, 129, 0.2);
 }
 .btn-secondary::after {
-    background: #FFFFFF;
+    background: var(--secondary);
 }
 
 .btn-secondary:hover {
-    background: transparent;
-    border-color: transparent;
+    background: var(--secondary);
+    opacity: 0.9;
     transform: translateY(-3px);
 }
 
