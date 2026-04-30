@@ -1,12 +1,13 @@
 :root {
-    --primary: #6366f1;
-    --primary-alt: #4f46e5;
-    --secondary: #ec4899;
-    --bg-dark: #0f172a;
-    --bg-card: #1e293b;
-    --text-main: #f8fafc;
-    --text-muted: #94a3b8;
-    --success: #10b981;
+    --primary: #6C5CE7;
+    --primary-light: #A29BFE;
+    --primary-alt: #4834D4;
+    --secondary: #00B894;
+    --bg-dark: #0D1117;
+    --bg-card: #161B22;
+    --text-main: #E6EDF3;
+    --text-muted: #8B949E;
+    --success: #00B894;
 }
 
 * {
@@ -47,7 +48,7 @@ a {
     justify-content: space-between;
     align-items: center;
     padding: 20px 50px;
-    background: rgba(15, 23, 42, 0.8);
+    background: rgba(13, 17, 23, 0.8);
     backdrop-filter: blur(10px);
     position: fixed;
     top: 0;
@@ -169,9 +170,9 @@ a {
     position: absolute;
     width: 300px;
     border-radius: 40px;
-    box-shadow: 0 30px 60px rgba(0,0,0,0.6), 0 0 40px rgba(99, 102, 241, 0.3);
-    border: 8px solid #1e293b;
-    background: #0f172a;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.6), 0 0 40px rgba(108, 92, 231, 0.3);
+    border: 8px solid var(--bg-card);
+    background: var(--bg-dark);
     overflow: hidden;
     transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.6s ease, filter 0.6s ease;
 }
@@ -204,19 +205,19 @@ a {
     transform: translateX(-190px) translateZ(-80px) rotateY(10deg) scale(0.9);
     opacity: 0.8;
     filter: blur(1px) brightness(0.9);
-    box-shadow: -20px 20px 40px rgba(236, 72, 153, 0.2);
+    box-shadow: -20px 20px 40px rgba(0, 184, 148, 0.2);
 }
 
 .phone-showcase:hover .bg-phone-right {
     transform: translateX(190px) translateZ(-80px) rotateY(-10deg) scale(0.9);
     opacity: 0.8;
     filter: blur(1px) brightness(0.9);
-    box-shadow: 20px 20px 40px rgba(99, 102, 241, 0.2);
+    box-shadow: 20px 20px 40px rgba(108, 92, 231, 0.2);
 }
 
 .phone-showcase:hover .main-phone {
     transform: translateZ(90px) scale(1.02);
-    box-shadow: 0 40px 80px rgba(99, 102, 241, 0.5), 0 0 60px rgba(236, 72, 153, 0.3);
+    box-shadow: 0 40px 80px rgba(108, 92, 231, 0.5), 0 0 60px rgba(0, 184, 148, 0.3);
 }
 
 @keyframes floating-phones {
@@ -361,7 +362,7 @@ a {
     left: -50%;
     width: 200%;
     height: 200%;
-    background: conic-gradient(transparent, var(--primary), #818cf8, var(--secondary), transparent 50%);
+    background: conic-gradient(transparent, var(--primary), var(--primary-light), var(--secondary), transparent 50%);
     animation: rotate-border 2.5s linear infinite;
     opacity: 0;
     transition: opacity 0.5s ease;
@@ -372,20 +373,20 @@ a {
     content: '';
     position: absolute;
     inset: 2px;
-    background: linear-gradient(135deg, var(--bg-card), #161f33);
+    background: linear-gradient(135deg, var(--bg-card), var(--bg-dark));
     border-radius: 18px;
     z-index: -1;
 }
 
 /* Specific Feature Card Tinting for UI Enhancement */
-.feature-card:nth-child(1)::after { background: linear-gradient(135deg, rgba(30, 64, 175, 0.4), var(--bg-card)); } /* Blue - Wallet */
-.feature-card:nth-child(2)::after { background: linear-gradient(135deg, rgba(190, 24, 93, 0.4), var(--bg-card)); } /* Pink - Analytics */
-.feature-card:nth-child(3)::after { background: linear-gradient(135deg, rgba(180, 83, 9, 0.4), var(--bg-card)); } /* Orange - Languages */
-.feature-card:nth-child(4)::after { background: linear-gradient(135deg, rgba(21, 128, 61, 0.4), var(--bg-card)); } /* Green - Privacy */
-.feature-card:nth-child(5)::after { background: linear-gradient(135deg, rgba(15, 118, 110, 0.4), var(--bg-card)); } /* Teal - Currency */
-.feature-card:nth-child(6)::after { background: linear-gradient(135deg, rgba(126, 34, 206, 0.4), var(--bg-card)); } /* Purple - Biometric */
-.feature-card:nth-child(7)::after { background: linear-gradient(135deg, rgba(30, 41, 59, 0.8), var(--bg-card)); } /* Dark Slate - Theme */
-.feature-card:nth-child(8)::after { background: linear-gradient(135deg, rgba(55, 48, 163, 0.4), var(--bg-card)); } /* Indigo - Cloud */
+.feature-card:nth-child(1)::after { background: linear-gradient(135deg, rgba(108, 92, 231, 0.4), var(--bg-card)); } /* Primary */
+.feature-card:nth-child(2)::after { background: linear-gradient(135deg, rgba(0, 184, 148, 0.4), var(--bg-card)); } /* Secondary */
+.feature-card:nth-child(3)::after { background: linear-gradient(135deg, rgba(162, 155, 254, 0.4), var(--bg-card)); } /* Primary Light */
+.feature-card:nth-child(4)::after { background: linear-gradient(135deg, rgba(72, 52, 212, 0.4), var(--bg-card)); } /* Primary Alt */
+.feature-card:nth-child(5)::after { background: linear-gradient(135deg, rgba(108, 92, 231, 0.4), var(--bg-card)); } /* Teal - Currency -> Primary */
+.feature-card:nth-child(6)::after { background: linear-gradient(135deg, rgba(0, 184, 148, 0.4), var(--bg-card)); } /* Purple - Biometric -> Secondary */
+.feature-card:nth-child(7)::after { background: linear-gradient(135deg, rgba(162, 155, 254, 0.4), var(--bg-card)); } /* Dark Slate - Theme -> Primary Light */
+.feature-card:nth-child(8)::after { background: linear-gradient(135deg, rgba(72, 52, 212, 0.4), var(--bg-card)); } /* Red - Backup -> Primary Alt */
 
 .feature-card:hover {
     transform: translateY(-10px);
@@ -507,7 +508,7 @@ a {
     left: -50%;
     width: 200%;
     height: 200%;
-    background: conic-gradient(transparent, var(--secondary), #f472b6, var(--primary), transparent 50%);
+    background: conic-gradient(transparent, var(--secondary), var(--primary-light), var(--primary), transparent 50%);
     animation: rotate-border 2.5s linear infinite;
     opacity: 0;
     transition: opacity 0.5s ease;
@@ -518,7 +519,7 @@ a {
     content: '';
     position: absolute;
     inset: 2px;
-    background: linear-gradient(135deg, rgba(30, 41, 59, 0.6), #161f33);
+    background: linear-gradient(135deg, var(--bg-card), var(--bg-dark));
     border-radius: 18px;
     z-index: -1;
 }
@@ -595,7 +596,7 @@ a {
 footer {
     border-top: 1px solid rgba(255,255,255,0.05);
     padding: 40px 50px;
-    background: #0b1121;
+    background: var(--bg-dark);
 }
 
 .footer-content {
@@ -730,7 +731,7 @@ footer {
         position: absolute;
         top: -500px;
         left: 0;
-        background: rgba(15, 23, 42, 0.98);
+        background: rgba(13, 17, 23, 0.98);
         backdrop-filter: blur(15px);
         width: 100%;
         height: auto;
