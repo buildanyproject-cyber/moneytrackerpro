@@ -1,0 +1,79 @@
+﻿Running Gradle task 'assembleRelease'...                        
+Font asset "Font-Awesome-7-Brands-Regular-400.otf" was tree-shaken, reducing it from 199352 to 2216 bytes (98.9% reduction). Tree-shaking can be disabled by providing the --no-tree-shake-icons flag when building your app.
+Font asset "Font-Awesome-7-Free-Regular-400.otf" was tree-shaken, reducing it from 87332 to 1504 bytes (98.3% reduction). Tree-shaking can be disabled by providing the --no-tree-shake-icons flag when building your app.
+Font asset "Font-Awesome-7-Free-Solid-900.otf" was tree-shaken, reducing it from 410592 to 1456 bytes (99.6% reduction). Tree-shaking can be disabled by providing the --no-tree-shake-icons flag when building your app.
+Font asset "MaterialIcons-Regular.otf" was tree-shaken, reducing it from 1645184 to 14724 bytes (99.1% reduction). Tree-shaking can be disabled by providing the --no-tree-shake-icons flag when building your app.
+flutter : ERROR: Missing classes detected while running R8. Please add the 
+missing classes or apply additional keep rules that are generated in 
+C:\Users\rishi\Desktop\MoneyTracker 
+Pro\moneytrackerpro_anti\build\app\outputs\mapping\release\missing_rules.txt.
+At line:1 char:1
++ flutter build apk --release > build_release_log.txt 2>&1
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (ERROR: Missing ...sing_rules.txt. 
+   :String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+ERROR: R8: Missing class 
+com.google.android.play.core.splitcompat.SplitCompatApplication (referenced 
+from: void 
+io.flutter.embedding.android.FlutterPlayStoreSplitApplication.<init>() and 2 
+other contexts)
+Missing class com.google.android.play.core.splitinstall.SplitInstallException 
+(referenced from: void io.flutter.embedding.engine.deferredcomponents.PlayStore
+DeferredComponentManager.lambda$installDeferredComponent$1(int, 
+java.lang.String, java.lang.Exception))
+Missing class com.google.android.play.core.splitinstall.SplitInstallManager 
+(referenced from: 
+com.google.android.play.core.splitinstall.SplitInstallManager io.flutter.embedd
+ing.engine.deferredcomponents.PlayStoreDeferredComponentManager.splitInstallMan
+ager and 5 other contexts)
+Missing class 
+com.google.android.play.core.splitinstall.SplitInstallManagerFactory 
+(referenced from: void io.flutter.embedding.engine.deferredcomponents.PlayStore
+DeferredComponentManager.<init>(android.content.Context, 
+io.flutter.embedding.engine.FlutterJNI))
+Missing class 
+com.google.android.play.core.splitinstall.SplitInstallRequest$Builder 
+(referenced from: void io.flutter.embedding.engine.deferredcomponents.PlayStore
+DeferredComponentManager.installDeferredComponent(int, java.lang.String))
+Missing class com.google.android.play.core.splitinstall.SplitInstallRequest 
+(referenced from: void io.flutter.embedding.engine.deferredcomponents.PlayStore
+DeferredComponentManager.installDeferredComponent(int, java.lang.String))
+Missing class 
+com.google.android.play.core.splitinstall.SplitInstallSessionState (referenced 
+from: void io.flutter.embedding.engine.deferredcomponents.PlayStoreDeferredComp
+onentManager$FeatureInstallStateUpdatedListener.onStateUpdate(com.google.androi
+d.play.core.splitinstall.SplitInstallSessionState) and 1 other context)
+Missing class 
+com.google.android.play.core.splitinstall.SplitInstallStateUpdatedListener 
+(referenced from: void io.flutter.embedding.engine.deferredcomponents.PlayStore
+DeferredComponentManager.<init>(android.content.Context, 
+io.flutter.embedding.engine.FlutterJNI) and 2 other contexts)
+Missing class com.google.android.play.core.tasks.OnFailureListener (referenced 
+from: void io.flutter.embedding.engine.deferredcomponents.PlayStoreDeferredComp
+onentManager.installDeferredComponent(int, java.lang.String))
+Missing class com.google.android.play.core.tasks.OnSuccessListener (referenced 
+from: void io.flutter.embedding.engine.deferredcomponents.PlayStoreDeferredComp
+onentManager.installDeferredComponent(int, java.lang.String))
+Missing class com.google.android.play.core.tasks.Task (referenced from: void io
+.flutter.embedding.engine.deferredcomponents.PlayStoreDeferredComponentManager.
+installDeferredComponent(int, java.lang.String) and 1 other context)
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':app:minifyReleaseWithR8'.
+> A failure occurred while executing 
+com.android.build.gradle.internal.tasks.R8Task$R8Runnable
+   > Compilation failed to complete
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+> Get more help at https://help.gradle.org.
+
+BUILD FAILED in 1m 25s
+Running Gradle task 'assembleRelease'...                           86.6s
+Gradle task assembleRelease failed with exit code 1

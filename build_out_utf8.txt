@@ -1,0 +1,90 @@
+﻿Running Gradle task 'assembleDebug'...                          
+flutter : lib/screens/r
+eminder/reminder_screen
+.dart:22:41: Error: 
+Member not found: 
+'instance'.
+At line:1 char:1
++ flutter build apk 
+--debug *>&1 | 
+Out-File -Encoding 
+utf8 build_out_ut ...
++ ~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~
+    + CategoryInfo     
+         : NotSpecifi  
+  ed: (lib/screens/r   
+ em...nd: 'instance    
+'.:String) [], Rem    
+oteException
+    + FullyQualifiedEr 
+   rorId : NativeComm  
+  andError
+ 
+  final HiveDatabase 
+_db = 
+HiveDatabase.instance;
+                       
+                 
+^^^^^^^^
+lib/screens/reminder/re
+minder_screen.dart:164:
+45: Error: The method 
+'scheduleReminder' 
+isn't defined for the 
+type 
+'NotificationService'.
+ - 
+'NotificationService' 
+is from 'package:moneyt
+rackerpro_anti/services
+/notification_service.d
+art' ('lib/services/not
+ification_service.dart'
+).
+Try correcting the 
+name to the name of an 
+existing method, or 
+defining a method 
+named 
+'scheduleReminder'.
+                      N
+otificationService().sc
+heduleReminder(
+                       
+                     
+^^^^^^^^^^^^^^^^
+Target kernel_snapshot_
+program failed: 
+Exception
+
+
+FAILURE: Build failed 
+with an exception.
+
+* What went wrong:
+Execution failed for 
+task ':app:compileFlutt
+erBuildDebug'.
+> Process 'command 'C:\
+flutter\bin\flutter.bat
+'' finished with 
+non-zero exit value 1
+
+* Try:
+> Run with 
+--stacktrace option to 
+get the stack trace.
+> Run with --info or 
+--debug option to get 
+more log output.
+> Run with --scan to 
+get full insights.
+> Get more help at http
+s://help.gradle.org.
+
+BUILD FAILED in 14s
+Running Gradle task 'assembleDebug'...                             15.7s
+Gradle task 
+assembleDebug failed 
+with exit code 1
